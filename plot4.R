@@ -19,8 +19,8 @@ par(mfrow = c(2,2))
   
   plot(con$DateTime, con$Sub_metering_1, cex = 0, ylab = "Global Active Power (kilowatts)", xlab = "", main = "")
   with(lines(con$DateTime, con$Sub_metering_1))   
-  with(lines(con$DateTime, con$Sub_metering_2))
-  with(lines(con$DateTime, con$Sub_metering_3))  
+  with(lines(con$DateTime, con$Sub_metering_2, col = "red"))
+  with(lines(con$DateTime, con$Sub_metering_3, col = "blue")) 
   legend("topright", lty = 1, legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
   
   plot(con$DateTime, con$Global_reactive_power, cex = 0, ylab = "Global Reactive Power", main = "")
